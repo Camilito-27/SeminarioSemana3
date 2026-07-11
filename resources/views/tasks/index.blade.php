@@ -77,5 +77,8 @@
                 </tbody>
             </table>
         </div>
+        <div class="mt-6 flex justify-center">
+    {{ $tareas->links() }}
+</div>
     </div>
 @endsection

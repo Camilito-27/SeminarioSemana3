@@ -24,7 +24,9 @@ class TaskController extends Controller
             }
         }
 
-        $tareas = $query->orderBy('created_at', 'desc')->get();
+        $tareas = $query->orderBy('created_at', 'desc')
+        ->paginate(15)
+        ->withQueryString();
 
         return view('tasks.index', compact('tareas'));
     }
